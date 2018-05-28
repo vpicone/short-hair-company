@@ -164,7 +164,7 @@ const HomepageLayout = () => (
         <Grid.Row verticalAlign="middle">
           <Grid.Column floated="left" width={8}>
             <Header as="h3" style={{ fontSize: '2em', textAlign: 'center', margin: '1em 0' }}>
-              Choose a cut and stylist
+              Pick a stylist and cut to reserve a slot.
             </Header>
             <Stylists />
           </Grid.Column>

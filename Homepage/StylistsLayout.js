@@ -1,9 +1,8 @@
 import { Component } from 'react';
 import { scroller } from 'react-scroll';
-import { Button, Container, Grid, Header, Icon, Menu, Responsive, Segment, Visibility } from 'semantic-ui-react';
+import { Button, Container, Header, Icon, Menu, Responsive, Segment, Visibility } from 'semantic-ui-react';
 import Stylists from './Stylists';
 import Services from './Services';
-import Contact from './Contact';
 import Footer from './Footer';
 import Page from '../Components/Page';
 
