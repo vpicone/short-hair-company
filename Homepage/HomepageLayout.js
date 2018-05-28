@@ -70,7 +70,7 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item>
-                  <Button href="https://shorthair.fullslate.com/" primary size="large">
+                  <Button href="https://shorthair.fullslate.com/" primary size="big">
                     Make an appointment
                     <Icon name="right arrow" />
                   </Button>

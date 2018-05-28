@@ -8,6 +8,7 @@ const Contact = () => (
   <Fragment>
     <Image
       src="https://res.cloudinary.com/vpp/image/upload/f_auto,q_auto/v1525204549/shc-storefront_pwybhw.jpg"
+      alt="store front"
       rounded
       size="large"
       style={{ marginBottom: '1em' }}
@@ -17,18 +18,20 @@ const Contact = () => (
         <Image
           src="https://res.cloudinary.com/vpp/image/upload/f_auto,q_auto/v1526331127/static_ueocat.png"
           as="a"
+          alt="map for directions"
           rounded
           centered
           label={{ color: 'red', content: 'Directions', icon: 'map', ribbon: true }}
           href="https://www.google.com/maps/dir//Short+Hair+Company/"
           target="_blank"
+          rel="noreferrer"
         />
         <address style={{ fontSize: '1.25em', marginTop: '0.5em', textAlign: 'center' }}>
           114 S Congress Ave, Austin, TX 78704
         </address>
         <Hours />
         <Header textAlign="center" as="h3" inverted>
-          Call: <a href="tel:512-806-9092">512-806-9092</a>
+          Call: <a style={{color: 'white', textDecoration: 'underline'}} href="tel:512-806-9092">512-806-9092</a>
         </Header>
       </Segment>
     </Element>
