@@ -1,3 +1,4 @@
+import React from 'react';
 import { Segment, Container, Header, Button, Icon } from 'semantic-ui-react';
 
 const Quotes = () => (
@@ -6,7 +7,12 @@ const Quotes = () => (
       <Header as="h3" style={{ fontSize: '2em' }}>
         Come get a haircut you can be proud of.
       </Header>
-      <Button href="https://shorthair.fullslate.com/" primary size="large" style={{ marginTop: '1em' }}>
+      <Button
+        href="https://shorthair.fullslate.com/"
+        primary
+        size="large"
+        style={{ marginTop: '1em' }}
+      >
         Make an appointment
         <Icon name="right arrow" />
       </Button>

@@ -17,6 +17,11 @@ export default class extends Document {
       <html lang="en">
         <Head>
           <meta charSet="utf-8" />
+          <link
+            rel="preload"
+            as="style"
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
+          />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
@@ -28,11 +33,20 @@ export default class extends Document {
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#333333" />
           <title>Short Hair Company</title>
-          <meta name="description" content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!" />
+          <meta
+            name="description"
+            content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!"
+          />
           <meta itemProp="name" content="Short Hair Company" />
-          <meta itemProp="description" content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!" />
+          <meta
+            itemProp="description"
+            content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!"
+          />
           <meta name="og:title" content="Short Hair Company" />
-          <meta name="og:description" content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!" />
+          <meta
+            name="og:description"
+            content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!"
+          />
           <meta
             name="og:image"
             content="https://res.cloudinary.com/vpp/image/upload/c_scale,f_auto,h_630,q_auto,w_1200/v1526326223/shc-bus-card.jpg"
@@ -40,7 +54,10 @@ export default class extends Document {
           <meta name="og:url" content="https://www.shorthaircompany.com" />
           <meta name="og:site_name" content="Short Hair Company" />
           <meta name="og:type" content="website" />
-          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css" />
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
+          />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{

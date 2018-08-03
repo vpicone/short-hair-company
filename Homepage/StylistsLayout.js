@@ -1,6 +1,15 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { scroller } from 'react-scroll';
-import { Button, Container, Header, Icon, Menu, Responsive, Segment, Visibility } from 'semantic-ui-react';
+import {
+  Button,
+  Container,
+  Header,
+  Icon,
+  Menu,
+  Responsive,
+  Segment,
+  Visibility,
+} from 'semantic-ui-react';
 import Stylists from './Stylists';
 import Services from './Services';
 import Footer from './Footer';
@@ -43,7 +52,11 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive {...Responsive.onlyComputer}>
-        <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
+        <Visibility
+          once={false}
+          onBottomPassed={this.showFixedMenu}
+          onBottomPassedReverse={this.hideFixedMenu}
+        >
           <Segment
             inverted
             textAlign="center"
@@ -157,13 +170,20 @@ const ResponsiveContainer = ({ children }) => (
   </Page>
 );
 
-const HomepageLayout = () => (
+const StylistsLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '0 1em 1em 1em' }} vertical>
-      <Header as="h3" style={{ fontSize: '2em', textAlign: 'center', margin: '1em 0' }}>
-        Choose a cut and stylist
+    <Segment padded vertical>
+      <Header textAlign="center" as="h1">
+        Stylists & Service
       </Header>
-      <div style={{ display: 'flex' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Stylists />
         <Services />
       </div>
@@ -171,4 +191,4 @@ const HomepageLayout = () => (
     <Footer />
   </ResponsiveContainer>
 );
-export default HomepageLayout;
+export default StylistsLayout;

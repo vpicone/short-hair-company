@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card, Button } from 'semantic-ui-react';
 
 const serviceMap = {
@@ -44,7 +45,7 @@ const employees = [
 ];
 
 const StylistCard = ({ name, id, services, bio, role }) => (
-  <Card fluid>
+  <Card color="red" style={{ minWidth: '325px', margin: '1em' }}>
     <Card.Content>
       {/* <Image rounded floated='right' size='tiny' src='https://via.placeholder.com/200' /> */}
       <Card.Header as="a" href={`https://shorthair.fullslate.com/employees/${id}`}>
@@ -54,7 +55,9 @@ const StylistCard = ({ name, id, services, bio, role }) => (
       <p>{bio}</p>
     </Card.Content>
     <Card.Content extra>
-      <Button.Group fluid style={{ display: 'flex', flexWrap: `${services.length > 3 ? 'wrap' : 'no-wrap'}` }}>
+      <Button.Group
+        style={{ display: 'flex', flexWrap: `${services.length > 3 ? 'wrap' : 'no-wrap'}` }}
+      >
         {services.map(serviceId => (
           <Button
             basic
@@ -72,7 +75,7 @@ const StylistCard = ({ name, id, services, bio, role }) => (
 );
 
 const Stylists = () => (
-  <Card.Group>
+  <Card.Group style={{ maxWidth: '800px', justifyContent: 'center', marginBottom: '1em' }}>
     {employees.map(({ id, services, name, bio, role }) => (
       <StylistCard key={id} id={id} services={services} name={name} bio={bio} role={role} />
     ))}

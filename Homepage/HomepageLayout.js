@@ -1,6 +1,16 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { scroller } from 'react-scroll';
-import { Button, Container, Grid, Header, Icon, Menu, Responsive, Segment, Visibility } from 'semantic-ui-react';
+import {
+  Button,
+  Container,
+  Grid,
+  Header,
+  Icon,
+  Menu,
+  Responsive,
+  Segment,
+  Visibility,
+} from 'semantic-ui-react';
 import Stylists from './Stylists';
 import Services from './Services';
 import Contact from './Contact';
@@ -44,7 +54,11 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive {...Responsive.onlyComputer}>
-        <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
+        <Visibility
+          once={false}
+          onBottomPassed={this.showFixedMenu}
+          onBottomPassedReverse={this.hideFixedMenu}
+        >
           <Segment
             inverted
             textAlign="center"

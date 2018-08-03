@@ -7,6 +7,6 @@ Router.onRouteChangeComplete = url => {
   gtag.pageview(url);
 };
 
-const Page = ({ children }) => <>{children}</>;
+const Page = ({ children }) => <React.Fragment>{children}</React.Fragment>;
 
 export default Page;

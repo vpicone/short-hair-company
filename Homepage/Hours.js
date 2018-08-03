@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Table, Header } from 'semantic-ui-react';
 
 const Hours = () => (
