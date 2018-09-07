@@ -7,8 +7,8 @@ import Hours from './Hours';
 const Contact = () => (
   <div style={{ marginTop: '3rem' }}>
     <Image
-      src="https://res.cloudinary.com/vpp/image/upload/f_auto,q_auto/v1525204549/shc-storefront_pwybhw.jpg"
-      alt="store front"
+      src="https://res.cloudinary.com/vpp/image/upload/f_auto,q_auto/v1536342740/shc/albums.jpg"
+      alt="album wall"
       rounded
       size="large"
       style={{ marginBottom: '1em' }}
