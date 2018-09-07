@@ -16,6 +16,7 @@ import Services from './Services';
 import Contact from './Contact';
 import Footer from './Footer';
 import Page from '../Components/Page';
+import styled from 'styled-components';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -31,7 +32,7 @@ const HomepageHeading = ({ mobile }) => (
         size="large"
         style={{ marginTop: '1em' }}
       >
-        Make an appointment
+        <span style={{ letterSpacing: '0.1ch' }}>MAKE AN APPOINTMENT</span>
         <Icon name="right arrow" />
       </Button>
     )}
@@ -151,11 +152,11 @@ class MobileContainer extends Component {
 
         <Button.Group attached="bottom">
           <Button secondary onClick={() => this.scrollTo('contact', 500)}>
-            contact
+            <span style={{ letterSpacing: '0.1ch', color: 'rgba(256,256,256,0.8)' }}>FIND US</span>
           </Button>
           <Button.Or text="&" />
           <Button secondary onClick={() => this.scrollTo('services', 650)}>
-            services
+            <span style={{ letterSpacing: '0.1ch', color: 'rgba(256,256,256,0.8)' }}>SERVICES</span>
           </Button>
         </Button.Group>
         {children}
@@ -171,15 +172,25 @@ const ResponsiveContainer = ({ children }) => (
   </Page>
 );
 
+const ContentHeader = styled.h1`
+  font-size: 3em;
+  text-align: center;
+  padding-top: 1em;
+  margin-bottom: 0.5em;
+  color: #fcfcfc;
+  @media (max-width: 700px) {
+    color: rgba(256, 256, 256, 0.8);
+    font-size: 1.5em;
+  }
+`;
+
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '0 1em 1em 1em' }} vertical>
+    <Segment style={{ padding: '0 1em 1em 1em', backgroundColor: '#020202' }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row verticalAlign="middle">
           <Grid.Column floated="left" width={8}>
-            <Header as="h3" style={{ fontSize: '2em', textAlign: 'center', margin: '1em 0' }}>
-              Pick a stylist and cut to reserve a slot.
-            </Header>
+            <ContentHeader>PICK A STYLIST & CUT</ContentHeader>
             <Stylists />
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
@@ -187,7 +198,7 @@ const HomepageLayout = () => (
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column textAlign="center">
+          <Grid.Column>
             <Services />
           </Grid.Column>
         </Grid.Row>

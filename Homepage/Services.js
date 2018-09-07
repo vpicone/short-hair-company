@@ -4,8 +4,15 @@ import { Table } from 'semantic-ui-react';
 import { Element } from 'react-scroll';
 
 const Services = () => (
-  <Element style={{ maxWidth: '600px' }} name="services">
-    <Table basic>
+  <Element style={{ display: 'flex', justifyContent: 'center' }} name="services">
+    <Table
+      style={{
+        padding: '0.5em',
+        maxWidth: '600px',
+        backgroundColor: '#fcfcfc',
+        marginBottom: '2em',
+      }}
+    >
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell textAlign="center" style={{ fontSize: '1.6em' }} colSpan="3">

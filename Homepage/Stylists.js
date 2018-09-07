@@ -1,5 +1,14 @@
 import React from 'react';
-import { Card, Button } from 'semantic-ui-react';
+import { Card as SemCard, Button } from 'semantic-ui-react';
+import styled from 'styled-components';
+
+const Card = styled(SemCard)`
+  min-width: 325px;
+  margin: 1em;
+  @media (min-width: 700px) {
+    min-width: 400px;
+  }
+`;
 
 const serviceMap = {
   '1': 'Standard',
@@ -45,7 +54,7 @@ const employees = [
 ];
 
 const StylistCard = ({ name, id, services, bio, role }) => (
-  <Card color="red" style={{ minWidth: '325px', margin: '1em' }}>
+  <Card color="red">
     <Card.Content>
       {/* <Image rounded floated='right' size='tiny' src='https://via.placeholder.com/200' /> */}
       <Card.Header as="a" href={`https://shorthair.fullslate.com/employees/${id}`}>

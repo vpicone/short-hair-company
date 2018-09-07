@@ -11,16 +11,18 @@ const Footer = () => (
       borderRadius: '0',
       borderTopLeftRadius: '0.3rem',
       borderTopRightRadius: '0.3rem',
+      backgroundColor: '#020202',
     }}
   >
     <Container>
-      <Header inverted as="h4">
-        Website by{' '}
-        <a
-          style={{ color: 'white', textDecoration: 'underline' }}
-          href="https://www.vincepicone.com"
-        >
-          Vince Picone
+      <Header style={{ color: '#fcfcfc' }} as="h4">
+        Website by &nbsp;
+        <a style={{ color: 'white', textDecoration: 'underline' }} href="https://www.raven.codes">
+          RLW
+        </a>
+        &nbsp; & &nbsp;
+        <a style={{ color: 'white', textDecoration: 'underline' }} href="https://vincepic.one">
+          VPP
         </a>
       </Header>
     </Container>

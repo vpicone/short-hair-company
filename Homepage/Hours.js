@@ -4,7 +4,7 @@ import { Table, Header } from 'semantic-ui-react';
 const Hours = () => (
   <Fragment>
     <Header as="h2">Hours</Header>
-    <Table basic compact inverted unstackable>
+    <Table basic compact unstackable>
       <Table.Body>
         <Table.Row>
           <Table.Cell>Mon-Fri</Table.Cell>

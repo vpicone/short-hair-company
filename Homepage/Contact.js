@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Image, Segment, Header } from 'semantic-ui-react';
 import { Element } from 'react-scroll';
 
 import Hours from './Hours';
 
 const Contact = () => (
-  <Fragment>
+  <div style={{ marginTop: '3rem' }}>
     <Image
       src="https://res.cloudinary.com/vpp/image/upload/f_auto,q_auto/v1525204549/shc-storefront_pwybhw.jpg"
       alt="store front"
@@ -14,7 +14,7 @@ const Contact = () => (
       style={{ marginBottom: '1em' }}
     />
     <Element name="contact">
-      <Segment inverted padded>
+      <Segment>
         <Image
           src="https://res.cloudinary.com/vpp/image/upload/f_auto,q_auto/v1530111964/staticmap2_vwmtac.png"
           as="a"
@@ -38,7 +38,7 @@ const Contact = () => (
         </Header>
       </Segment>
     </Element>
-  </Fragment>
+  </div>
 );
 
 export default Contact;
