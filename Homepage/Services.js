@@ -22,25 +22,30 @@ const Services = () => (
       </Table.Header>
       <Table.Body>
         <Table.Row>
-          <Table.Cell>The Standard</Table.Cell>
+          <Table.Cell>Standard Cut</Table.Cell>
           <Table.Cell>$28</Table.Cell>
           <Table.Cell>
             Stylist will preform a short hair cut using clippers and scissors.
           </Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Cleaned Up</Table.Cell>
+          <Table.Cell>Clean Up</Table.Cell>
           <Table.Cell>$20</Table.Cell>
           <Table.Cell>
             Choose one: a single guard clipper all over, or a sides and back with scissors
           </Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>The Spruce Up</Table.Cell>
+          <Table.Cell>Beard Trim</Table.Cell>
           <Table.Cell>$15</Table.Cell>
           <Table.Cell>
             We incorporate a combination of clippers and scissors to shape up your beard.
           </Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Cut & Beard</Table.Cell>
+          <Table.Cell>$43</Table.Cell>
+          <Table.Cell>The Standard with a Spruce Up beard trim</Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>The Old Fashioned</Table.Cell>

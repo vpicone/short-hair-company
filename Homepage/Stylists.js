@@ -11,11 +11,12 @@ const Card = styled(SemCard)`
 `;
 
 const serviceMap = {
-  '1': 'Standard',
+  '1': 'Standard Cut',
   '11': 'Clean up',
-  '28': 'Spruce Up',
+  '28': 'Beard Trim',
   '55': 'Old Fashioned',
   '61': 'Mr. Everything',
+  '1152': 'Cut & Beard',
 };
 
 const employees = [
@@ -23,7 +24,7 @@ const employees = [
     name: 'Damien R',
     role: 'Owner and Stylist',
     id: 2,
-    services: [1, 11, 28],
+    services: [1, 11, 28, 1152],
     bio:
       'A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people.',
   },
@@ -31,7 +32,7 @@ const employees = [
     name: 'Bradley Jackson',
     role: 'Stylist',
     id: 623,
-    services: [1, 11, 55],
+    services: [1, 11, 28, 1152, 55, 61],
     bio:
       'Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co.',
   },
@@ -39,7 +40,7 @@ const employees = [
     name: 'Joselyn',
     role: 'Stylist',
     id: 634,
-    services: [1, 11, 28],
+    services: [1, 11, 28, 1152],
     bio:
       'Loves to have fun in everything she does. Cutting hair since 2011, wide variety of interests so enjoys talking to clients about theirs. Bilingual and fluent in Spanish.',
   },
@@ -47,7 +48,7 @@ const employees = [
     name: 'Albert A',
     role: 'Stylist',
     id: 863,
-    services: [1, 11, 28, 55, 61],
+    services: [1, 11, 28, 1152, 55, 61],
     bio:
       'From San Antonion, grew up in Austin. Loves being a barber and the opportunity to meet people from all walks of life. ',
   },
