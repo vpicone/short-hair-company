@@ -31,9 +31,7 @@ const Services = () => (
         <Table.Row>
           <Table.Cell>Clean Up</Table.Cell>
           <Table.Cell>$20</Table.Cell>
-          <Table.Cell>
-            Choose one: a single guard clipper all over, or a sides and back with scissors
-          </Table.Cell>
+          <Table.Cell>A single guard all over, executed pefectly.</Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>Beard Trim</Table.Cell>
