@@ -14,9 +14,9 @@ const serviceMap = {
   '1': 'Standard Cut',
   '11': 'Clean up',
   '28': 'Beard Trim',
+  '1152': 'Cut & Beard',
   '55': 'Old Fashioned',
   '61': 'Mr. Everything',
-  '1152': 'Cut & Beard',
 };
 
 const employees = [
@@ -51,6 +51,14 @@ const employees = [
     services: [1, 11, 28, 1152, 55, 61],
     bio:
       'From San Antonion, grew up in Austin. Loves being a barber and the opportunity to meet people from all walks of life. ',
+  },
+  {
+    name: 'Saskia',
+    role: 'Stylist',
+    id: 1179,
+    services: [1, 11, 28, 1152],
+    bio:
+      "Born in El Paso, grew up in Germany. She's a mult-cultural barber of 11 years and into fresh fades, scissor cuts, music and soccer.",
   },
 ];
 
