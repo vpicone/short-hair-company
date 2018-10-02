@@ -37,14 +37,6 @@ const employees = [
       'Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co.',
   },
   {
-    name: 'Joselyn',
-    role: 'Stylist',
-    id: 634,
-    services: [1, 11, 28, 1152],
-    bio:
-      'Loves to have fun in everything she does. Cutting hair since 2011, wide variety of interests so enjoys talking to clients about theirs. Bilingual and fluent in Spanish.',
-  },
-  {
     name: 'Albert A',
     role: 'Stylist',
     id: 863,
@@ -59,6 +51,14 @@ const employees = [
     services: [1, 11, 28, 1152],
     bio:
       "Born in El Paso, grew up in Germany. She's a mult-cultural barber of 11 years and into fresh fades, scissor cuts, music and soccer.",
+  },
+  {
+    name: 'Savannah Lake',
+    role: 'Stylist',
+    id: 1208,
+    services: [1, 11, 28, 1152],
+    bio:
+      'Born and raised in Austin, TX. Savannah has years of experience behind the chair. You can find her outside the shop showing the same enthusiasm for playing at local venues.',
   },
 ];
 
