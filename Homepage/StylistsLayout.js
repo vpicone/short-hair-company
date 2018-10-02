@@ -117,7 +117,6 @@ class DesktopContainer extends Component {
 
 class MobileContainer extends Component {
   scrollTo = (element, duration) => {
-    console.log(element);
     scroller.scrollTo(element, {
       smooth: true,
       offset: -14,

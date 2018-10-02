@@ -1,9 +1,7 @@
 /* eslint react/no-danger: 0 */
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
-
-import { GA_TRACKING_ID } from '../lib/gtag';
 
 export default class extends Document {
   static getInitialProps({ renderPage }) {
@@ -15,7 +13,7 @@ export default class extends Document {
   render() {
     return (
       <html lang="en">
-        <Head>
+        {/* <Head>
           <meta charSet="utf-8" />
           <link
             rel="preload"
@@ -69,7 +67,7 @@ export default class extends Document {
           `,
             }}
           />
-        </Head>
+        </Head> */}
         <body>
           <Main />
           <NextScript />

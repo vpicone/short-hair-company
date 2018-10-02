@@ -22,7 +22,7 @@ import styled from 'styled-components';
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container attached>
+  <Container>
     {mobile && (
       <Button
         position="bottom"
@@ -119,7 +119,6 @@ class DesktopContainer extends Component {
 
 class MobileContainer extends Component {
   scrollTo = (element, duration) => {
-    console.log(element);
     scroller.scrollTo(element, {
       smooth: true,
       offset: -14,
