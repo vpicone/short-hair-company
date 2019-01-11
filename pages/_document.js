@@ -1,19 +1,22 @@
 /* eslint react/no-danger: 0 */
 import React from 'react';
-import Document, { Main, NextScript } from 'next/document';
-import flush from 'styled-jsx/server';
+import Document, { Main, NextScript, Head } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+
+import { GA_TRACKING_ID } from '../lib/gtag';
 
 export default class extends Document {
   static getInitialProps({ renderPage }) {
-    const { html, head, errorHtml, chunks } = renderPage();
-    const styles = flush();
-    return { html, head, errorHtml, chunks, styles };
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   render() {
     return (
       <html lang="en">
-        {/* <Head>
+        <Head>
           <meta charSet="utf-8" />
           <link
             rel="preload"
@@ -30,7 +33,6 @@ export default class extends Document {
           <meta name="msapplication-TileColor" content="#b91d47" />
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
           <meta name="theme-color" content="#333333" />
-          <title>Short Hair Company</title>
           <meta
             name="description"
             content="Short Hair Company is an Austin based, traditional barbershop with a modern twist. Come select a barber, a hair cut, and book an appointment online!"
@@ -67,7 +69,7 @@ export default class extends Document {
           `,
             }}
           />
-        </Head> */}
+        </Head>
         <body>
           <Main />
           <NextScript />
