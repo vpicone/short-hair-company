@@ -2,7 +2,7 @@
   "name": "short-hair-company",
   "version": "1.1.0",
   "description": "Short Hair Company Austin Texas",
-  "main": "index.js",
+  "main": "next.config.js",
   "scripts": {
     "dev": "next",
     "start": "next start",
@@ -11,90 +11,16 @@
     "deploy": "now && now alias",
     "serve": "serve -s out"
   },
-  "now": {
-    "alias": [
-      "shorthaircompany.com",
-      "www.shorthaircompany.com"
-    ]
-  },
   "author": "Vince Picone & Raven Wills",
   "license": "ISC",
-  "eslintIgnore": [
-    "/out"
-  ],
   "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
-    "next": "^7.0.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-modal": "^3.6.1",
+    "babel-plugin-styled-components": "^1.10.0",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-modal": "^3.8.1",
     "react-scroll": "^1.7.10",
     "semantic-ui-react": "^0.82.5",
     "styled-components": "^3.4.9"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.6.1",
-    "eslint-config-react-app": "^3.0.3",
-    "eslint-plugin-flowtype": "^2.50.3",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3",
-    "serve": "^10.0.2"
-  },
-  "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          "next/babel"
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      },
-      "production": {
-        "presets": [
-          "next/babel"
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      },
-      "test": {
-        "presets": [
-          [
-            "next/babel",
-            {
-              "preset-env": {
-                "modules": "commonjs"
-              }
-            }
-          ]
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      }
-    }
   }
 }
