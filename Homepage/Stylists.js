@@ -50,7 +50,7 @@ const employees = [
     id: 1500,
     services: [1, 11, 28, 1152],
     bio:
-      "Born in El Paso, grew up in Germany. She's a mult-cultural barber of 11 years and into fresh fades, scissor cuts, music and soccer."
+      "Born and raised in Chicago, moved to texas 4 years ago. Loves watching and talking football. Her specialty is men's cuts and textures and taking care of her two kids."
   },
   {
     name: "Savannah Lake",
@@ -58,7 +58,7 @@ const employees = [
     id: 1208,
     services: [1, 11, 28, 1152],
     bio:
-      "Born and raised in Chicago, moved to texas 4 years ago. Loves watching and talking football. Her specialty is men's cuts and textures and taking care of her two kids."
+      "Born and raised in Austin, TX.Savannah has years of experience behind the chair.You can find her outside the shop showing the same enthusiasm for playing at local venues."
   }
 ];
 
