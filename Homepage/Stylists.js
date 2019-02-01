@@ -20,30 +20,14 @@ const serviceMap = {
 };
 
 const employees = [
-  {
-    name: "Damien R",
-    role: "Owner and Stylist",
-    id: 2,
-    services: [1, 11, 28, 1152],
-    bio:
-      "A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people."
-  },
-  {
-    name: "Bradley Jackson",
-    role: "Stylist",
-    id: 623,
-    services: [1, 11, 28, 1152, 55, 61],
-    bio:
-      "Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co."
-  },
-  {
-    name: "Albert A",
-    role: "Stylist",
-    id: 863,
-    services: [1, 11, 28, 1152, 55, 61],
-    bio:
-      "From San Antonion, grew up in Austin. Loves being a barber and the opportunity to meet people from all walks of life. "
-  },
+  // {
+  //   name: "Albert A",
+  //   role: "Stylist",
+  //   id: 863,
+  //   services: [1, 11, 28, 1152, 55, 61],
+  //   bio:
+  //     "From San Antonion, grew up in Austin. Loves being a barber and the opportunity to meet people from all walks of life. "
+  // },
   {
     name: "Keesha Holland",
     role: "Stylist",
@@ -59,11 +43,27 @@ const employees = [
     services: [1, 11, 28, 1152],
     bio:
       "Born and raised in Austin, TX.Savannah has years of experience behind the chair.You can find her outside the shop showing the same enthusiasm for playing at local venues."
+  },
+  {
+    name: "Bradley Jackson",
+    role: "Stylist",
+    id: 623,
+    services: [1, 11, 28, 1152, 55, 61],
+    bio:
+      "Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co."
+  },
+  {
+    name: "Damien R",
+    role: "Owner and Stylist",
+    id: 2,
+    services: [1, 11, 28, 1152],
+    bio:
+      "A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people."
   }
 ];
 
 const StylistCard = ({ name, id, services, bio, role }) => (
-  <Card color="red">
+  <Card padded color="red">
     <Card.Content>
       {/* <Image rounded floated='right' size='tiny' src='https://via.placeholder.com/200' /> */}
       <Card.Header

@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "next": "^7.0.2",
+    "next": "canary",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-modal": "^3.8.1",
