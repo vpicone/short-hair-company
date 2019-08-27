@@ -1,6 +1,6 @@
-import React from "react";
-import { Card as SemCard, Button } from "semantic-ui-react";
-import styled from "styled-components";
+import React from 'react';
+import { Card as SemCard, Button } from 'semantic-ui-react';
+import styled from 'styled-components';
 
 const Card = styled(SemCard)`
   min-width: 325px;
@@ -11,55 +11,48 @@ const Card = styled(SemCard)`
 `;
 
 const serviceMap = {
-  "1": "Standard Cut",
-  "11": "Clean up",
-  "28": "Beard Trim",
-  "1152": "Cut & Beard",
-  "55": "Old Fashioned",
-  "61": "Mr. Everything"
+  '1': 'Standard Cut',
+  '11': 'Buzz cut',
+  '28': 'Spruce up w/o razor',
+  '1152': 'Cut & Beard',
+  '55': 'Old Fashioned',
+  '61': 'Mr. Everything',
+  '2117': 'The Makeover'
 };
 
 const employees = [
-  // {
-  //   name: "Albert A",
-  //   role: "Stylist",
-  //   id: 863,
-  //   services: [1, 11, 28, 1152, 55, 61],
-  //   bio:
-  //     "From San Antonion, grew up in Austin. Loves being a barber and the opportunity to meet people from all walks of life. "
-  // },
   {
-    name: "Keesha Holland",
-    role: "Stylist",
+    name: 'Keesha Holland',
+    role: 'Stylist',
     id: 1500,
-    services: [1, 11, 28, 1152],
+    services: [1, 11, 28, 1152, 2117],
     bio:
-      "Born and raised in Chicago, moved to texas 4 years ago. Loves watching and talking football. Her specialty is men's cuts and textures and taking care of her two kids."
+      "Born and raised in Chicago, moved to texas 4 years ago. Loves watching and talking football. Her specialty is men's cuts and textures and taking care of her two kids.",
   },
   {
-    name: "Savannah Lake",
-    role: "Stylist",
-    id: 1208,
-    services: [1, 11, 28, 1152],
+    name: 'Keir Bashmakov',
+    role: 'Stylist',
+    id: 1646,
+    services: [1, 11, 28, 1152, 55, 61, 2117],
     bio:
-      "Born and raised in Austin, TX.Savannah has years of experience behind the chair.You can find her outside the shop showing the same enthusiasm for playing at local venues."
+      'Keir is a barber, bassist, and writer from Northern California. She loves everything sci-fi and surf rock. On her off time, she enjoys spending time at the springs, the green belt, or just making things with friends.',
   },
   {
-    name: "Bradley Jackson",
-    role: "Stylist",
+    name: 'Bradley Jackson',
+    role: 'Stylist',
     id: 623,
     services: [1, 11, 28, 1152, 55, 61],
     bio:
-      "Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co."
+      'Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co.',
   },
   {
-    name: "Damien R",
-    role: "Owner and Stylist",
+    name: 'Damien R',
+    role: 'Owner and Stylist',
     id: 2,
-    services: [1, 11, 28, 1152],
+    services: [1, 11, 28, 1152, 2117],
     bio:
-      "A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people."
-  }
+      'A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people.',
+  },
 ];
 
 const StylistCard = ({ name, id, services, bio, role }) => (
@@ -78,8 +71,8 @@ const StylistCard = ({ name, id, services, bio, role }) => (
     <Card.Content extra>
       <Button.Group
         style={{
-          display: "flex",
-          flexWrap: `${services.length > 3 ? "wrap" : "no-wrap"}`
+          display: 'flex',
+          flexWrap: `${services.length > 3 ? 'wrap' : 'no-wrap'}`,
         }}
       >
         {services.map(serviceId => (
@@ -100,7 +93,7 @@ const StylistCard = ({ name, id, services, bio, role }) => (
 
 const Stylists = () => (
   <Card.Group
-    style={{ maxWidth: "800px", justifyContent: "center", marginBottom: "1em" }}
+    style={{ maxWidth: '800px', justifyContent: 'center', marginBottom: '1em' }}
   >
     {employees.map(({ id, services, name, bio, role }) => (
       <StylistCard

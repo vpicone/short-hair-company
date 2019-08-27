@@ -1,5 +1,7 @@
 {
   "version": 2,
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
-  "alias": ["shorthaircompany.com", "www.shorthaircompany.com"]
+  "alias": [
+    "shorthaircompany.com",
+    "www.shorthaircompany.com"
+  ]
 }
