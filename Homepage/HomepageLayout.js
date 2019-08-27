@@ -7,36 +7,38 @@ import {
   Header,
   Icon,
   Menu,
-  Responsive,
   Segment,
-  Visibility
+  Visibility,
 } from "semantic-ui-react";
 import Stylists from "./Stylists";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Page from "../Components/Page";
 import styled from "styled-components";
+import useMedia from 'use-media';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
-const HomepageHeading = ({ mobile }) => (
-  <Container>
-    {mobile && (
-      <Button
-        position="bottom"
-        href="https://shorthair.fullslate.com/"
-        primary
-        size="large"
-        style={{ marginTop: "1em" }}
-      >
-        <span style={{ letterSpacing: "0.1ch" }}>MAKE AN APPOINTMENT</span>
-        <Icon name="right arrow" />
-      </Button>
-    )}
-  </Container>
-);
+const HomepageHeading = ({ isMobile }) => {
+  return (
+    <Container>
+      {isMobile && (
+        <Button
+          position="bottom"
+          href="https://shorthair.fullslate.com/"
+          primary
+          size="large"
+          style={{ marginTop: "1em" }}
+        >
+          <span style={{ letterSpacing: "0.1ch" }}>MAKE AN APPOINTMENT</span>
+          <Icon name="right arrow" />
+        </Button>
+      )}
+    </Container>
+  )
+};
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
@@ -53,7 +55,7 @@ class DesktopContainer extends Component {
     const { fixed } = this.state;
 
     return (
-      <Responsive {...Responsive.onlyComputer}>
+      <Segment style={{ padding: 0, border: 'none' }}>
         <Visibility
           once={false}
           onBottomPassed={this.showFixedMenu}
@@ -117,7 +119,7 @@ class DesktopContainer extends Component {
         </Visibility>
 
         {children}
-      </Responsive>
+      </Segment>
     );
   }
 }
@@ -133,7 +135,7 @@ class MobileContainer extends Component {
   render() {
     const { children } = this.props;
     return (
-      <Responsive {...Responsive.onlyMobile}>
+      <Segment style={{ padding: 0, border: 'none' }}>
         <Segment
           inverted
           textAlign="center"
@@ -146,11 +148,12 @@ class MobileContainer extends Component {
             backgroundImage: `url(https://res.cloudinary.com/vpp/image/upload/c_scale,f_auto,q_auto,w_600/v1526326223/shc-bus-card.jpg)`,
             backgroundRepeat: "no-repeat",
             backgroundColor: "#434343",
-            backgroundPosition: "center -25px"
+            backgroundSize: 'cover',
+            backgroundPosition: "center"
           }}
           vertical
         >
-          <HomepageHeading mobile />
+          <HomepageHeading isMobile />
         </Segment>
 
         <Button.Group attached="bottom">
@@ -171,17 +174,19 @@ class MobileContainer extends Component {
           </Button>
         </Button.Group>
         {children}
-      </Responsive>
+      </Segment>
     );
   }
 }
 
-const ResponsiveContainer = ({ children }) => (
-  <Page>
-    <DesktopContainer>{children}</DesktopContainer>
-    <MobileContainer>{children}</MobileContainer>
-  </Page>
-);
+const ResponsiveContainer = ({ children }) => {
+  const isMobile = useMedia({ maxWidth: 768 });
+  return (
+    <Page>
+      {isMobile ? <MobileContainer>{children}</MobileContainer> : <DesktopContainer>{children}</DesktopContainer>}
+    </Page>
+  )
+};
 
 const ContentHeader = styled.h1`
   font-size: 3em;
@@ -205,8 +210,8 @@ const HomepageLayout = () => (
       }}
       vertical
     >
-      <Grid container stackable verticalAlign="middle">
-        <Grid.Row verticalAlign="middle">
+      <Grid container stackable>
+        <Grid.Row>
           <Grid.Column floated="left" width={8}>
             <ContentHeader>PICK A STYLIST & CUT</ContentHeader>
             <Stylists />

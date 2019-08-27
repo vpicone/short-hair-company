@@ -7,23 +7,27 @@ import { GA_TRACKING_ID } from "../lib/gtag";
 
 export default class extends Document {
   static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
-        });
+        })
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
-        // @ts-ignore
-        styles: [...initialProps.styles, ...sheet.getStyleElement()]
-      };
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      }
     } finally {
-      sheet.seal();
+      sheet.seal()
     }
   }
 
@@ -32,11 +36,6 @@ export default class extends Document {
       <html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <link
-            rel="preload"
-            as="style"
-            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
-          />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -92,10 +91,7 @@ export default class extends Document {
           <meta name="og:url" content="https://www.shorthaircompany.com" />
           <meta name="og:site_name" content="Short Hair Company" />
           <meta name="og:type" content="website" />
-          <link
-            rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
-          />
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

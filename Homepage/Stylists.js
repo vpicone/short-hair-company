@@ -56,7 +56,7 @@ const employees = [
 ];
 
 const StylistCard = ({ name, id, services, bio, role }) => (
-  <Card padded color="red">
+  <Card padded="true" color="red">
     <Card.Content>
       {/* <Image rounded floated='right' size='tiny' src='https://via.placeholder.com/200' /> */}
       <Card.Header
