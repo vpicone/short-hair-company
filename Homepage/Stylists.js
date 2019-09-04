@@ -22,6 +22,14 @@ const serviceMap = {
 
 const employees = [
   {
+    name: 'Roger The Barber',
+    role: 'Stylist',
+    id: 2116,
+    services: [1, 11, 28, 1152, 55, 61],
+    bio:
+      "Roger the Barber enjoys volunteering on his spare time. Been in Austin since 1995. Avoids traffic at all cost! Sports fan! UT, Texans, Spurs, & Rangers! Loves street Tacos.",
+  },
+  {
     name: 'Keesha Holland',
     role: 'Stylist',
     id: 1500,
