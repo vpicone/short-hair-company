@@ -12,23 +12,20 @@ const Services = () => (
             <Table.Cell>Standard Cut</Table.Cell>
             <Table.Cell>$28</Table.Cell>
             <Table.Cell>
-              Stylist will preform a short hair cut using clippers and scissors.
+              Stylist will preform a short hair cut using clippers and scissors
             </Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>Buzz Cut</Table.Cell>
             <Table.Cell>$20</Table.Cell>
-            <Table.Cell>
-              You choose. 1. A single clipper guard all over OR 2.A clean up on
-              the sides and back with scissors or clippers
-            </Table.Cell>
+            <Table.Cell>A single clipper guard all over</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>Spruce up w/o razor</Table.Cell>
             <Table.Cell>$20</Table.Cell>
             <Table.Cell>
-              $20-We incorporate a combination of clippers and scissors to shape
-              up your beard. $20-Beard work with razor
+              We incorporate a combination of clippers and scissors to shape up
+              your beard with or with a razor
             </Table.Cell>
           </Table.Row>
           <Table.Row>
@@ -40,9 +37,8 @@ const Services = () => (
             <Table.Cell>The Old Fashioned</Table.Cell>
             <Table.Cell>$35</Table.Cell>
             <Table.Cell>
-              Includes hot lather , essential oils and a three-step hot towel
-              process to ensure the cleanest shave. Finished with an after shave
-              balm and cool towel.
+              Includes hot lather, essential oils and a three-step hot towel
+              process to ensure the cleanest shave
             </Table.Cell>
           </Table.Row>
           <Table.Row>
@@ -57,7 +53,8 @@ const Services = () => (
             <Table.Cell>The Makeover</Table.Cell>
             <Table.Cell>$60</Table.Cell>
             <Table.Cell>
-              When its time to change the game up and go from longer hair to short.
+              When its time to change the game up and go from longer hair to
+              short
             </Table.Cell>
           </Table.Row>
         </Table.Body>
