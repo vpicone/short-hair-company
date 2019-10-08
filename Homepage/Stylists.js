@@ -17,7 +17,7 @@ const serviceMap = {
   '1152': 'Cut & Beard',
   '55': 'Old Fashioned',
   '61': 'Mr. Everything',
-  '2117': 'The Makeover'
+  '2117': 'The Makeover',
 };
 
 const employees = [
@@ -27,7 +27,15 @@ const employees = [
     id: 2116,
     services: [1, 11, 28, 1152, 55, 61],
     bio:
-      "Roger the Barber enjoys volunteering on his spare time. Been in Austin since 1995. Avoids traffic at all cost! Sports fan! UT, Texans, Spurs, & Rangers! Loves street Tacos.",
+      'Roger the Barber enjoys volunteering on his spare time. Been in Austin since 1995. Avoids traffic at all cost! Sports fan! UT, Texans, Spurs, & Rangers! Loves street Tacos.',
+  },
+  {
+    name: 'Dana Kelly',
+    role: 'Stylist',
+    id: 2259,
+    services: [1, 11, 28, 1152, 55, 61, 2117],
+    bio:
+      'Dana has both Cosmetology and Barber licenses, she loves interacting with clients and building a rapport with them. She finds that being a barber is both incredibly challenging and rewarding.',
   },
   {
     name: 'Keesha Holland',
