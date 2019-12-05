@@ -22,20 +22,20 @@ const serviceMap = {
 
 const employees = [
   {
-    name: 'Roger The Barber',
-    role: 'Stylist',
-    id: 2116,
-    services: [1, 11, 28, 1152, 55, 61],
-    bio:
-      'Roger the Barber enjoys volunteering on his spare time. Been in Austin since 1995. Avoids traffic at all cost! Sports fan! UT, Texans, Spurs, & Rangers! Loves street Tacos.',
-  },
-  {
     name: 'Dana Kelly',
     role: 'Stylist',
     id: 2259,
     services: [1, 11, 28, 1152, 55, 61, 2117],
     bio:
       'Dana has both Cosmetology and Barber licenses, she loves interacting with clients and building a rapport with them. She finds that being a barber is both incredibly challenging and rewarding.',
+  },
+  {
+    name: 'Damien R',
+    role: 'Owner and Stylist',
+    id: 2,
+    services: [1, 11, 28, 1152, 2117],
+    bio:
+      'A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people.',
   },
   {
     name: 'Keesha Holland',
@@ -46,14 +46,6 @@ const employees = [
       "Born and raised in Chicago, moved to texas 4 years ago. Loves watching and talking football. Her specialty is men's cuts and textures and taking care of her two kids.",
   },
   {
-    name: 'Keir Bashmakov',
-    role: 'Stylist',
-    id: 1646,
-    services: [1, 11, 28, 1152, 55, 61, 2117],
-    bio:
-      'Keir is a barber, bassist, and writer from Northern California. She loves everything sci-fi and surf rock. On her off time, she enjoys spending time at the springs, the green belt, or just making things with friends.',
-  },
-  {
     name: 'Bradley Jackson',
     role: 'Stylist',
     id: 623,
@@ -62,12 +54,12 @@ const employees = [
       'Born and raised in Austin. Joined Bevelle Barber School in 2016. Specializes in haircuts, shaves, and mens facials. Loves the laid back atmosphere and music at Short Hair Co.',
   },
   {
-    name: 'Damien R',
-    role: 'Owner and Stylist',
-    id: 2,
-    services: [1, 11, 28, 1152, 2117],
+    name: 'Keir Bashmakov',
+    role: 'Stylist',
+    id: 1646,
+    services: [1, 11, 28, 1152, 55, 61, 2117],
     bio:
-      'A local business owner with nearly a decade of hair cutting experience. Comfortable with clippers, scissors and any texture of hair. Has a son in college and enjoys down to earth people.',
+      'Keir is a barber, bassist, and writer from Northern California. She loves everything sci-fi and surf rock. On her off time, she enjoys spending time at the springs, the green belt, or just making things with friends.',
   },
 ];
 
