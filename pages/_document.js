@@ -1,22 +1,21 @@
 /* eslint react/no-danger: 0 */
-import React from "react";
-import Document, { Main, NextScript, Head } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, { Main, NextScript, Head } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-import { GA_TRACKING_ID } from "../lib/gtag";
+import { GA_TRACKING_ID } from '../lib/gtag';
 
 export default class extends Document {
   static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
-        })
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+        });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -24,10 +23,10 @@ export default class extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        )
-      }
+        ),
+      };
     } finally {
-      sheet.seal()
+      sheet.seal();
     }
   }
 
@@ -91,7 +90,10 @@ export default class extends Document {
           <meta name="og:url" content="https://www.shorthaircompany.com" />
           <meta name="og:site_name" content="Short Hair Company" />
           <meta name="og:type" content="website" />
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+          />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -103,7 +105,7 @@ export default class extends Document {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_TRACKING_ID}');
-          `
+          `,
             }}
           />
         </Head>
