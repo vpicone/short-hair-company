@@ -90,10 +90,6 @@ export default class extends Document {
           <meta name="og:url" content="https://www.shorthaircompany.com" />
           <meta name="og:site_name" content="Short Hair Company" />
           <meta name="og:type" content="website" />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-          />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
