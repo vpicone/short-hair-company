@@ -24,7 +24,7 @@ const Services = () => (
             <Table.Cell>Spruce up w/o razor</Table.Cell>
             <Table.Cell>$20</Table.Cell>
             <Table.Cell>
-              We incorporate a combination of clippers and scissors to shape up your beard with or with a razor.
+              We'll incorporate a combination of clippers and scissors to shape up your beard with or with a razor.
             </Table.Cell>
           </Table.Row>
           <Table.Row>
